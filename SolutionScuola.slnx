@@ -1,0 +1,15 @@
+<Solution>
+  <Folder Name="/Backend/">
+    <Project Path="DTOs/DTOs.csproj" />
+    <Project Path="Models/Models.csproj" />
+  </Folder>
+  <Folder Name="/Backend/API/" />
+  <Folder Name="/Backend/Data/">
+    <Project Path="ScuolaDbContext/ScuolaDbContext.csproj" />
+  </Folder>
+  <Folder Name="/Backend/RepositoryPatern/">
+    <Project Path="GenericRepositories/GenericRepositories.csproj" />
+    <Project Path="Services/Services.csproj" />
+  </Folder>
+  <Folder Name="/Frontend/" />
+</Solution>
