@@ -12,11 +12,16 @@ namespace WebApi
 
             // Add services to the container.
             //string ConnectionString = builder.Configuration.GetConnectionString("StrCon")!;
-            builder.Services.AddDbContext<ScuolaDbContext>(options => 
+            builder.Services.AddDbContext<ScuolaDbContext>(options =>
                 options.UseSqlServer(
                     builder.Configuration.GetConnectionString("StrCon")
                     )
             );
+
+            //builder.Services.AddDbContext<ScuolaDbContext>(options =>
+            //    options.UseSqlite("Data Source=Scuola.db3")
+            //);
+            builder.Services.AddScoped<IStudenteRepository, StudenteRepository >();
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

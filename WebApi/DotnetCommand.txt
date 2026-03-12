@@ -1,0 +1,9 @@
+1 dotnet buil 
+2 dotnet run 
+3 dotnet restore
+4 dotnet rebuild
+5 dotnet ef add migrations nomedella migrazionre
+6 dotnet ef database update
+7 dotnet ef migrations remove => per rimuovere l'ultima migrazione
+8 dotnet ef migrations list => per vedere tutte le migrazioni
+9 dotnet ef dbcontext scaffold "Server=localhost;Database=nomeDb;User Id=sa;Password=Password1;" Microsoft.EntityFrameworkCore.SqlServer -o Models -f => per generare i modelli a partire da un database esistente

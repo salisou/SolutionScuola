@@ -13,5 +13,10 @@
     <Project Path="GenericRepositories/GenericRepositories.csproj" />
     <Project Path="Services/Services.csproj" />
   </Folder>
+  <Folder Name="/Esercizi/">
+    <File Path="ExoCSharp.txt" />
+    <Project Path="ConsoleApp1/ConsoleApp1.csproj" Id="55804ad8-dd09-4828-9994-4b0594d0b403" />
+    <Project Path="WinFormsApp1/WinFormsApp1.csproj" Id="6b33abb2-73b1-4da6-bdd9-6647786b1cb4" />
+  </Folder>
   <Folder Name="/Frontend/" />
 </Solution>
