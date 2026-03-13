@@ -57,6 +57,7 @@
             btnSalva.TabIndex = 14;
             btnSalva.Text = "Salva";
             btnSalva.UseVisualStyleBackColor = false;
+            btnSalva.Click += btnSalva_Click;
             // 
             // label3
             // 

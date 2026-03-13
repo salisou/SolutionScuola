@@ -1,3 +1,5 @@
+using WinFormsApp1.Database;
+
 namespace WinFormsApp1
 {
     internal static class Program
@@ -8,9 +10,11 @@ namespace WinFormsApp1
         [STAThread]
         static void Main()
         {
+            SQLitePCL.Batteries.Init();
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
+            ScuolaDatabase.InitializeDatabase();
             Application.Run(new frmLogin());
         }
     }
