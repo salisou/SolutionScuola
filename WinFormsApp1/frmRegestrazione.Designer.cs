@@ -40,7 +40,7 @@
             cmbRuolo = new ComboBox();
             txtEmail = new TextBox();
             txtConfermaPassword = new TextBox();
-            lkRegistrazione = new LinkLabel();
+            lkLogin = new LinkLabel();
             txtPassword = new TextBox();
             txtUserName = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -98,6 +98,7 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // label4
             // 
@@ -142,7 +143,6 @@
             // cmbRuolo
             // 
             cmbRuolo.FormattingEnabled = true;
-            cmbRuolo.Items.AddRange(new object[] { "Studente", "Docente" });
             cmbRuolo.Location = new Point(149, 245);
             cmbRuolo.Name = "cmbRuolo";
             cmbRuolo.Size = new Size(156, 23);
@@ -165,15 +165,16 @@
             txtConfermaPassword.Size = new Size(279, 24);
             txtConfermaPassword.TabIndex = 26;
             // 
-            // lkRegistrazione
+            // lkLogin
             // 
-            lkRegistrazione.AutoSize = true;
-            lkRegistrazione.Location = new Point(373, 310);
-            lkRegistrazione.Name = "lkRegistrazione";
-            lkRegistrazione.Size = new Size(114, 15);
-            lkRegistrazione.TabIndex = 25;
-            lkRegistrazione.TabStop = true;
-            lkRegistrazione.Text = "Fai clic per Accedere";
+            lkLogin.AutoSize = true;
+            lkLogin.Location = new Point(373, 310);
+            lkLogin.Name = "lkLogin";
+            lkLogin.Size = new Size(114, 15);
+            lkLogin.TabIndex = 25;
+            lkLogin.TabStop = true;
+            lkLogin.Text = "Fai clic per Accedere";
+            lkLogin.LinkClicked += lkLogin_LinkClicked;
             // 
             // txtPassword
             // 
@@ -200,7 +201,7 @@
             Controls.Add(cmbRuolo);
             Controls.Add(txtEmail);
             Controls.Add(txtConfermaPassword);
-            Controls.Add(lkRegistrazione);
+            Controls.Add(lkLogin);
             Controls.Add(txtPassword);
             Controls.Add(txtUserName);
             Controls.Add(pictureBox2);
@@ -217,6 +218,7 @@
             Name = "frmRegestrazione";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmRegestrazione";
+            Load += frmRegestrazione_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
@@ -237,7 +239,7 @@
         private ComboBox cmbRuolo;
         private TextBox txtEmail;
         private TextBox txtConfermaPassword;
-        private LinkLabel lkRegistrazione;
+        private LinkLabel lkLogin;
         private TextBox txtPassword;
         private TextBox txtUserName;
     }

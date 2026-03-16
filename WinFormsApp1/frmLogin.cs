@@ -1,3 +1,5 @@
+using SchoolCRM;
+
 namespace WinFormsApp1
 {
     public partial class frmLogin : Form
@@ -10,7 +12,8 @@ namespace WinFormsApp1
                 { "Luca", "Passw0rd!"},
                 { "Giulia", "Qwerty123$" }
             };
-        frmHome home = new();
+
+        MainForm mainForm = new();
 
         public frmLogin()
         {
@@ -37,7 +40,7 @@ namespace WinFormsApp1
 
             if (users.ContainsKey(txtUserName.Text) && users.ContainsValue(txtPassword.Text))
             {
-                home.Show();
+                mainForm.Show();
                 this.Hide();
             }
             else
